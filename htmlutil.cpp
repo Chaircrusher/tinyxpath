@@ -57,11 +57,11 @@ void v_out_html (
 	{
       switch (XNp_child -> Type ())
       {
-         case TiXmlNode::DOCUMENT :
+         case TiXmlNode::TINYXML_DOCUMENT :
 			   fprintf (Fp_out, "\nStart document\n");
             break;
 
-		   case TiXmlNode::ELEMENT :
+		   case TiXmlNode::TINYXML_ELEMENT :
 			   v_levelize ((int) u_level, Fp_out, true);
 			   fprintf (Fp_out, "&lt;");   // '<'
 			   fprintf (Fp_out, "%s", XNp_child -> ToElement () -> Value ());
@@ -78,14 +78,14 @@ void v_out_html (
 				   fprintf (Fp_out, " /&gt;<br>\n");
             break;
 
-		   case TiXmlNode::COMMENT :
+		   case TiXmlNode::TINYXML_COMMENT :
 			   fprintf (Fp_out, "&lt;!-- %s --&gt;<br>\n", XNp_child -> ToComment () -> Value ());
             break;
-		   case TiXmlNode::TEXT :
+		   case TiXmlNode::TINYXML_TEXT :
 			   fprintf (Fp_out, "%s\n", XNp_child -> ToText () -> Value ());
             break;
-		   case TiXmlNode::UNKNOWN :
-		   case TiXmlNode::DECLARATION :
+		   case TiXmlNode::TINYXML_UNKNOWN :
+		   case TiXmlNode::TINYXML_DECLARATION :
             break;
 		   default :
 			   assert (false);
@@ -95,10 +95,10 @@ void v_out_html (
 
       switch (XNp_child -> Type ())
       {
-         case TiXmlNode::DOCUMENT :
+         case TiXmlNode::TINYXML_DOCUMENT :
    			fprintf (Fp_out, "\nEnd document\n");
             break;
-		   case TiXmlNode::ELEMENT :
+		   case TiXmlNode::TINYXML_ELEMENT :
 			   if (XNp_child -> FirstChild ())
 			   {
 				   v_levelize ((int) u_level, Fp_out, true);
@@ -107,10 +107,10 @@ void v_out_html (
 				   fprintf (Fp_out, "&gt;<br>\n");   // '>\n'
 			   }
             break;
-         case TiXmlNode::COMMENT :
-         case TiXmlNode::TEXT :
-		   case TiXmlNode::UNKNOWN :
-		   case TiXmlNode::DECLARATION :
+         case TiXmlNode::TINYXML_COMMENT :
+         case TiXmlNode::TINYXML_TEXT :
+		   case TiXmlNode::TINYXML_UNKNOWN :
+		   case TiXmlNode::TINYXML_DECLARATION :
          default :
             break;
       }
