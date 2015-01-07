@@ -32,7 +32,7 @@ distribution.
 #define __TINYUTIL_H
 
 #include "tinyxpath_conf.h"
-#include "tinyxml.h"
+#include <tinyxml/tinyxml.h>
 
 #ifdef _MSC_VER
    #pragma warning (disable : 4514)  

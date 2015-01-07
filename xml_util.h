@@ -30,7 +30,7 @@ distribution.
 #ifndef __XML_UTIL_H
 #define __XML_UTIL_H
 
-#include "tinyxml.h"
+#include <tinyxml/tinyxml.h>
 
 namespace TinyXPath
 {

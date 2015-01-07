@@ -25,7 +25,7 @@ distribution.
 #ifndef __NODE_SET_H
 #define __NODE_SET_H
 
-#include "tinyxml.h"
+#include <tinyxml/tinyxml.h>
 #include "tinyxpath_conf.h"
 
 namespace TinyXPath

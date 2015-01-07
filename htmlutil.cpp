@@ -28,7 +28,7 @@ distribution.
    HTML utilities for TinyXPath project
 */
 
-#include "tinyxml.h"
+#include <tinyxml/tinyxml.h>
 #include "htmlutil.h"
 
 /// Generate some indentation on the HTML or file output

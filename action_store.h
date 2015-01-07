@@ -30,7 +30,7 @@ distribution.
 #ifndef __ACTION_STORE_H
 #define __ACTION_STORE_H
 
-#include "tinyxml.h"
+#include <tinyxml/tinyxml.h>
 
 namespace TinyXPath
 {

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 project(tinyxpath)
 
-include_directories(${tinyxml_INCLUDE_DIR} ${tinyxml_INCLUDE_DIR}/tinyxml)
+include_directories(${tinyxml_INCLUDE_DIR})
 
 set(tinyxpath_SRC
   action_store.cpp tinystr.cpp xml_util.cpp xpath_stream.cpp

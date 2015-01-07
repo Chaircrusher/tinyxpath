@@ -26,7 +26,7 @@ distribution.
 #define __EXPR_H
 
 #include "tinyxpath_conf.h"
-#include "tinyxml.h"
+#include <tinyxml/tinyxml.h>
 #include "node_set.h"
 
 namespace TinyXPath
